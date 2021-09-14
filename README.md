@@ -18,7 +18,7 @@ ________________________________________________________________________________
 
   Utilizing Nmap, we can issue the following command to enumerate our network for Roku devices by looking for service versions (-sV), operating systems (-O), and speeding up the scan by not resolving DNS (-n).
 ```
-nmap -sV -O -n 192.168.X.X/24
+$ sudo nmap -sV -O -n 192.168.X.X/24
 ```
 **Output of Nmap scan:**
 ```
@@ -57,6 +57,22 @@ roku, inc. 	cc:6d:a0
 roku, inc 	84:ea:ed 	
 ```
 ## More Enumeration
+
+     We can identify the device location, name, and several other pertinent fields such as supporting remote capabilities! Another way of enumerating Roku devices is by sending a request to the Simple Service Discovery Port (SSDP) multicast address and port 1900. We can do this by using Netcat:
+
+```
+$ nc -u 239.255.255.250 1900 < Roku_ECP_Enum.txt
+```
+
+The device will respond with this information which can also be observed in Wireshark:
+
+```
+HTTP/1.1 200 OK
+Cache-Control: max-age=3600
+ST: roku:ecp
+Location: http://192.168.X.X:8060/
+USN: uuid:roku:ecp:P0A070000007
+``` 
 
   Utilizing Nmap and Wireshark, we can easily identify the IP address of any Roku devices attached to the network, and if they support the use of ECPs, we can remotely view the XML file on the webserver of the device!
   
@@ -130,4 +146,4 @@ roku, inc 	84:ea:ed
 <davinci-version>2.8.20</davinci-version>
 </device-info>
 ```
-  We can identify the device location, name, and several other pertinent fields such as supporting remote capabilities!
+
