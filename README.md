@@ -32,3 +32,102 @@ MAC Address: 10:59:32:XX:XX:XX (Roku)
 ```
   We see that Nmap identified the OUI of the MAC address, but I have provided a list of Roku MAC addresses to search for on your network!
   
+  **ROKU MAC Addresses**
+  
+```
+roku, inc. 	d0:4d:2c 	
+roku, inc. 	b0:a7:37 	
+roku, inc 	b0:ee:7b 	
+roku, inc 	d8:31:34 	
+roku, inc 	10:59:32 	
+roku, inc 	a8:b5:7c 	
+roku, inc. 	b8:a1:75 	
+roku, inc. 	88:de:a9 	
+roku, inc. 	00:0d:4b 	
+roku, inc 	20:ef:bd 	
+roku, inc. 	08:05:81 	
+roku, inc 	c8:3a:6b 	
+roku, inc 	8c:49:62 	
+roku, inc 	bc:d7:d4 	
+roku, inc. 	ac:3a:7a 	
+roku, inc. 	b8:3e:59 	
+roku, inc. 	dc:3a:5e 	
+roku, inc 	ac:ae:19 	
+roku, inc. 	cc:6d:a0 	
+roku, inc 	84:ea:ed 	
+```
+## More Enumeration
+
+  Utilizing Nmap and Wireshark, we can easily identify the IP address of any Roku devices attached to the network, and if they support the use of ECPs, we can remotely view the XML file on the webserver of the device!
+  
+  ```
+  http://192.168.X.X:8060/query/device-info
+  ```
+  This will produce an XML page similar to the one below:
+  ```
+<device-info>
+<serial-number>X004000B231</serial-number>
+<device-id>S00820BB231</device-id>
+<vendor-name>Roku</vendor-name>
+<model-name>Roku Ninja</model-name>
+<model-number>3930X</model-number>
+<model-region>US</model-region>
+<is-tv>false</is-tv>
+<is-stick>false</is-stick>
+<ui-resolution>1080p</ui-resolution>
+<supports-ethernet>false</supports-ethernet>
+<wifi-mac>10:59:32</wifi-mac>
+<wifi-driver>realtek</wifi-driver>
+<has-wifi-extender>false</has-wifi-extender>
+<has-wifi-5G-support>true</has-wifi-5G-support>
+<can-use-wifi-extender>true</can-use-wifi-extender>
+<network-type>wifi</network-type>
+<network-name>Perry Wifi</network-name>
+<friendly-device-name>Roku LivingRoom</friendly-device-name>
+<friendly-model-name>Roku Express</friendly-model-name>
+<default-device-name>Roku Express - X004000AJDX1</default-device-name>
+<user-device-name>Roku Master</user-device-name>
+<user-device-location>LivingRoom</user-device-location>
+<build-number>AEA.00E04209A</build-number>
+<software-version>10.0.0</software-version>
+<software-build>4209</software-build>
+<secure-device>true</secure-device>
+<language>en</language>
+<country>US</country>
+<locale>en_US</locale>
+<time-zone-auto>true</time-zone-auto>
+<time-zone>US/Eastern</time-zone>
+<time-zone-name>United States/Eastern</time-zone-name>
+<time-zone-tz>America/New_York</time-zone-tz>
+<time-zone-offset>-240</time-zone-offset>
+<clock-format>12-hour</clock-format>
+<uptime>2912968</uptime>
+<power-mode>PowerOn</power-mode>
+<supports-suspend>false</supports-suspend>
+<supports-find-remote>true</supports-find-remote>
+<find-remote-is-possible>false</find-remote-is-possible>
+<supports-audio-guide>true</supports-audio-guide>
+<supports-rva>true</supports-rva>
+<developer-enabled>false</developer-enabled>
+<keyed-developer-id/>
+<search-enabled>true</search-enabled>
+<search-channels-enabled>true</search-channels-enabled>
+<voice-search-enabled>true</voice-search-enabled>
+<notifications-enabled>true</notifications-enabled>
+<notifications-first-use>true</notifications-first-use>
+<supports-private-listening>true</supports-private-listening>
+<headphones-connected>false</headphones-connected>
+<supports-ecs-textedit>true</supports-ecs-textedit>
+<supports-ecs-microphone>true</supports-ecs-microphone>
+<supports-wake-on-wlan>false</supports-wake-on-wlan>
+<supports-airplay>true</supports-airplay>
+<has-play-on-roku>true</has-play-on-roku>
+<has-mobile-screensaver>false</has-mobile-screensaver>
+<support-url>roku.com/support</support-url>
+<grandcentral-version>5.5.62</grandcentral-version>
+<trc-version>3.0</trc-version>
+<trc-channel-version>4.2.3</trc-channel-version>
+<davinci-version>2.8.20</davinci-version>
+</device-info>
+```
+  We can identify the device location, name, and several other pertinent fields such as supporting remote capabilities!
