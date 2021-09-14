@@ -63,7 +63,6 @@ roku, inc 	84:ea:ed
 ```
 $ nc -u 239.255.255.250 1900 < Roku_ECP_Enum.txt
 ```
-
 The device will respond with this information which can also be observed in Wireshark:
 
 ```
