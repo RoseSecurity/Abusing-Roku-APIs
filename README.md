@@ -17,9 +17,11 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________________________________________
 
   Utilizing Nmap, we can issue the following command to enumerate our network for Roku devices by looking for service versions (-sV), operating systems (-O), and speeding up the scan by not resolving DNS (-n).
+
 ```
 $ sudo nmap -sV -O -n 192.168.X.X/24
 ```
+
 **Output of Nmap scan:**
 ```
 Nmap scan report for 192.168.X.X
@@ -32,7 +34,7 @@ MAC Address: 10:59:32:XX:XX:XX (Roku)
 ```
   We see that Nmap identified the OUI of the MAC address, but I have provided a list of Roku MAC addresses to search for on your network!
   
-  **ROKU MAC Addresses**
+**ROKU MAC Addresses**
   
 ```
 roku, inc. 	d0:4d:2c 	
@@ -56,9 +58,11 @@ roku, inc 	ac:ae:19
 roku, inc. 	cc:6d:a0 	
 roku, inc 	84:ea:ed 	
 ```
-## More Enumeration
 
-     We can identify the device location, name, and several other pertinent fields such as supporting remote capabilities! Another way of enumerating Roku devices is by sending a request to the Simple Service Discovery Port (SSDP) multicast address and port 1900. We can do this by using Netcat:
+## More Enumeration
+____________________________________________________________________________________________________________________________________________________________________
+
+We can identify the device location, name, and several other pertinent fields such as supporting remote capabilities! Another way of enumerating Roku devices is by sending a request to the Simple Service Discovery Port (SSDP) multicast address and port 1900. We can do this by using Netcat:
 
 ```
 $ nc -u 239.255.255.250 1900 < Roku_ECP_Enum.txt
@@ -73,13 +77,14 @@ Location: http://192.168.X.X:8060/
 USN: uuid:roku:ecp:P0A070000007
 ``` 
 
-  Utilizing Nmap and Wireshark, we can easily identify the IP address of any Roku devices attached to the network, and if they support the use of ECPs, we can remotely view the XML file on the webserver of the device!
+Utilizing Nmap and Wireshark, we can easily identify the IP address of any Roku devices attached to the network, and if they support the use of ECPs, we can remotely view the XML file on the webserver of the device!
   
   ```
   http://192.168.X.X:8060/query/device-info
   ```
-  This will produce an XML page similar to the one below:
-  ```
+This will produce an XML page similar to the one below:
+  
+```
 <device-info>
 <serial-number>X004000B231</serial-number>
 <device-id>S00820BB231</device-id>
