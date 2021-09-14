@@ -102,7 +102,7 @@ This will produce an XML page similar to the one below:
 <has-wifi-5G-support>true</has-wifi-5G-support>
 <can-use-wifi-extender>true</can-use-wifi-extender>
 <network-type>wifi</network-type>
-<network-name>Perry Wifi</network-name>
+<network-name>Hillary's Email Server</network-name>
 <friendly-device-name>Roku LivingRoom</friendly-device-name>
 <friendly-model-name>Roku Express</friendly-model-name>
 <default-device-name>Roku Express - X004000AJDX1</default-device-name>
