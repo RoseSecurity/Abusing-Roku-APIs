@@ -150,4 +150,10 @@ This will produce an XML page similar to the one below:
 <davinci-version>2.8.20</davinci-version>
 </device-info>
 ```
+## Issuing Commands
+____________________________________________________________________________________________________________________________________________________________________
+
+There are numerous commands that can be issued via HTTP requests, so I have provided the table of potential ECPs that can be sent to the device:
+
+
 
