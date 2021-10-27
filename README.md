@@ -9,7 +9,7 @@ ________________________________________________________________________________
 ## Introduction: 
 
 ____________________________________________________________________________________________________________________________________________________________________
-  I am excited to share how to successfully enumerate your network for Roku devices, issue External Control Protocol (ECP) commands to remotely manipulate televisions, and how to design custom scripts to automate messing with your friends!
+  I am excited to share how to successfully enumerate your network for Roku devices, issue External Control Protocol (ECP) commands to remotely manipulate televisions, and how to design custom scripts to automate messing with your friends! For more information, check out my Medium article: https://medium.com/@RoseSecurity/a-quick-guide-on-how-to-aggravate-friends-family-and-foes-37182230d7. 
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Enumerating Your Network for Roku Devices:
