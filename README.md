@@ -162,26 +162,30 @@ ________________________________________________________________________________
 ## An Example Script for Having Fun
 ____________________________________________________________________________________________________________________________________________________________________
 
-```
+```bash
 #!/bin/bash
-# How to mess with someone who has a Roku TV 101
-Hahaha = 1
-while [ $Hahaha -le 100 ]
-do 
-curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
-curl -d '' "http://192.168.X.X:8060/keypress/powerOff"
-curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
-curl -d '' "http://192.168.X.X:8060/keypress/powerOff"
-((Hahaha=Hahaha+1))
+# Prank script for Roku TV
+Hahaha=1
+
+# Power on and off loop
+while [ $Hahaha -le 100 ]; do
+    curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
+    curl -d '' "http://192.168.X.X:8060/keypress/powerOff"
+    ((Hahaha=Hahaha+1))
 done
+
+# Power on and go to Home
 curl -d '' "http://192.168.X.X:8060/keypress/powerOn"
 curl -d '' "http://192.168.X.X:8060/keypress/Home"
-while [ $Hahaha -le 100 ]
-do
-curl -d '' "http://192.168.X.X:8060/keypress/left"
-curl -d '' "http://192.168.X.X:8060/keypress/down"
-((Hahaha=Hahaha+1))
+
+# Navigation loop
+Hahaha=1
+while [ $Hahaha -le 100 ]; do
+    curl -d '' "http://192.168.X.X:8060/keypress/left"
+    curl -d '' "http://192.168.X.X:8060/keypress/down"
+    ((Hahaha=Hahaha+1))
 done
+
 echo "Can we still be friends?"
 ```
 
