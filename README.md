@@ -36,28 +36,34 @@ MAC Address: 10:59:32:XX:XX:XX (Roku)
   
 **ROKU MAC Addresses**
   
-```
-roku, inc. 	d0:4d:2c 	
-roku, inc. 	b0:a7:37 	
-roku, inc 	b0:ee:7b 	
-roku, inc 	d8:31:34 	
-roku, inc 	10:59:32 	
-roku, inc 	a8:b5:7c 	
-roku, inc. 	b8:a1:75 	
-roku, inc. 	88:de:a9 	
-roku, inc. 	00:0d:4b 	
-roku, inc 	20:ef:bd 	
-roku, inc. 	08:05:81 	
-roku, inc 	c8:3a:6b 	
-roku, inc 	8c:49:62 	
-roku, inc 	bc:d7:d4 	
-roku, inc. 	ac:3a:7a 	
-roku, inc. 	b8:3e:59 	
-roku, inc. 	dc:3a:5e 	
-roku, inc 	ac:ae:19 	
-roku, inc. 	cc:6d:a0 	
-roku, inc 	84:ea:ed 	
-```
+| MAC Range |
+|-----------|
+| 9C:F1:D4  |
+| 34:5E:08  |
+| 7C:67:AB  |
+| D4:E2:2F  |
+| A8:B5:7C  |
+| BC:D7:D4  |
+| 20:EF:BD  |
+| D8:31:34  |
+| C8:3A:6B  |
+| B0:EE:7B  |
+| AC:AE:19  |
+| 8C:49:62  |
+| 84:EA:ED  |
+| 10:59:32  |
+| AC:3A:7A  |
+| 88:DE:A9  |
+| 8A:C7:2E  |
+| B8:A1:75  |
+| 00:0D:4B  |
+| DC:3A:5E  |
+| D0:4D:2C  |
+| CC:6D:A0  |
+| B8:3E:59  |
+| B0:A7:37  |
+| 08:05:81  |
+
 
 ## More Enumeration
 ____________________________________________________________________________________________________________________________________________________________________
