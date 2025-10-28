@@ -187,6 +187,7 @@ curl -d '' "http://192.168.X.X:8060/keypress/Home"
 # Navigation loop
 Hahaha=1
 while [ $Hahaha -le 100 ]; do
+    curl -d '' "http://192.168.X.X:8060/keypress/VolumeUp"
     curl -d '' "http://192.168.X.X:8060/keypress/left"
     curl -d '' "http://192.168.X.X:8060/keypress/down"
     ((Hahaha=Hahaha+1))
